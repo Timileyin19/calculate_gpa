@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+     div.resultDetails {display: none}
+     .loading, #calculatedGPA {display: none}
+    </style>
+
+    <title>GPA Calculator</title>
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center">
+                    <h2 class="display-4">GPA Calculator</h2>
+                    <hr>
+                    <div class="userInput">
+                        <p class="text-left">Enter the Number of Courses Registered</p>
+                        <form class="form-inline" id="userInput">
+                            <div class="form-group mr-3">
+                                <input type="number" class="form-control" id="numOfCourse" placeholder="Registered Courses" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Continue" class="form-control btn btn-outline-dark">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="resultDetails mt-3">
+                        <p class="text-left">Enter the details of each of the Courses</p>
+                        <form class="form-inline w-100" id="grades">
+                            
+                        </form>
+                        <button id="computeGP" class="btn btn-primary text-left">Compute your GPA</button>
+                    </div>
+                    <div class="loading">
+                        <img src="loading.gif" alt="spinner" style="height: 100px; width: 150px">
+                    </div>
+                    <div id="calculatedGPA">
+                        <p>Computed GPA</p>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">GPA</span>
+                                </div>
+                                <input type="number" id="displayGPA" class="form-control" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Remark</span>
+                                </div>
+                                <input type="text" id="displayRemark" class="form-control" disabled>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" id="reload">Compute Another GPA</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <script src="bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
